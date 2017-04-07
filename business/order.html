@@ -1,0 +1,154 @@
+<?xml version="1.1" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+	"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Order Jump Ropes</title>
+	<link rel="stylesheet" type="text/css" href="mybusiness.css" />
+</head>
+
+<body>
+	<div class="header">
+		<h1>Jacob's Jump Ropes&reg;</h1>
+		<blockquote>
+			<p>Just keep jumpin&copy;</p>
+		</blockquote>
+
+		<ul id="navbar">
+			<li><a href="mybusiness2.html#aboutus">About</a>
+				<ul>
+					<li><a href="mybusiness2.html#aboutus">The Founder</a></li>
+					<li><a href="mybusiness2.html#aboutus">The Company</a></li>
+					<li><a href="mybusiness2.html#aboutus">The Product</a></li>
+				</ul>
+			</li>
+			<li><a href="mybusiness2.html#producttable">Products</a>
+				<ul>
+					<li><a href="mybusiness2.html#producttable">Jumpster 2&reg;</a></li>
+					<li><a href="mybusiness2.html#producttable">Jump Sticker&reg;</a></li>
+					<li><a href="mybusiness2.html#producttable">Jump-Master&reg;</a></li>
+					<li><a href="mybusiness2.html#producttable">Jump-O-Matic 5,000&reg;</a></li>
+				</ul>
+			</li>
+			<li><a href="mybusiness2.html#">Links</a>
+				<ul>
+					<li><a href="order2.html">Order Here</a></li>
+					<li><a href="mybusiness2.html#aboutus">About Us</a></li>
+				</ul>
+			</li>
+		</ul>
+
+	</div>
+	<div class="mainContainer">
+		<div class="sideBar">
+
+			<h3>Products</h3>
+			<table id="producttable">
+				<tr>
+					<th>Product</th>
+					<th>Description</th>
+					<th>Price</th>
+				</tr>
+				<tr>
+					<td>Jump Sticker&reg;</td>
+					<td>A cool sticker for your jump rope</td>
+					<td>$5.00</td>
+				</tr>
+				<tr>
+					<td>Jumpster 2&reg;</td>
+					<td>The basic rope</td>
+					<td>$15.00</td>
+				</tr>
+				<tr>
+					<td>Jump-Master&reg;</td>
+					<td>Jump rope featuring gyroscope and accelerometer</td>
+					<td>$200.00</td>
+				</tr>
+				<tr>
+					<td>Jump-O-Matic 5,000&reg;</td>
+					<td>Jump rope with full LED display and gold lining</td>
+					<td>$20,000.00</td>
+				</tr>
+			</table>
+
+			<h3>Top Sellers</h3>
+			<ol>
+				<li>Jumpster 2&reg;</li>
+				<li>Jump Sticker&reg;</li>
+				<li>Jump-Master&reg;</li>
+				<li>Jump-O-Matic 5,000&reg;</li>
+			</ol>
+
+		</div>
+		<div class="mainContent">
+			<form action="" method="post">
+				<fieldset>
+					<legend>Customer Information</legend>
+					<label for="name">Name: </label>
+					<input type="text" name="name" id="name"></input><br/>
+					<label for="street">Street: </label>
+					<input type="text" name="street" id="street"></input><br/>
+					<label for="city">City: </label>
+					<input type="text" name="city" id="city"></input><br/>
+					<label for="state">State: </label>
+					<input type="text" name="state" id="state"></input><br/>
+					<label for="zipcode">Zipcode: </label>
+					<input type="text" name="zipcode" id="zipcode"></input><br/>
+					<label for="email">Email: </label>
+					<input type="text" name="email" id="email"></input>
+				</fieldset>
+				<fieldset>
+					<legend>Order Information</legend>
+					<label for="productChosen">Select a product: </label>
+					<select id="productChosen">
+						<option value="sticker">Jump Sticker&reg;</option>
+						<option value="jumpster">Jumpster 2&reg;</option>
+						<option value="jumpMaster">Jump-Master&reg;</option>
+						<option value="jumpOMatic">Jump-O-Matic 5,000&reg;</option>
+					</select><br/>
+					<p>
+						How did you find out about us?<br/>
+						<input type="radio" name="findOut" value="flyering" id="flyering"></input>
+						<label class="radioLabel" for="flyering">BruinWalk Flyering</label><br/>
+						<input type="radio" name="findOut" value="billboard" id="billboard"></input>
+						<label class="radioLabel" for="billboard">Billboard</label><br/>
+						<input type="radio" name="findOut" value="tvAd" id="tvAd"></input>
+						<label class="radioLabel" for="tvAd">Television Advertisement</label><br/>
+						<input type="radio" name="findOut" value="other" id="other"></input>
+						<label class="radioLabel" for="other">Other</label>
+					</p>
+					<input type="checkbox" id="subscribe"></input>
+					<label for="subscribe">Subscribe to mailing list</label><br/>
+					<label for="cardType">Select a card: </label>
+					<select id="cardType">
+						<option value="visa">Visa</option>
+						<option value="mastercard">Mastercard</option>
+						<option value="discover">Discover</option>
+						<option value="americanExpress">American Express</option>
+					</select><br/>
+					<label for="cardNumber">Card number: </label>
+					<input type="password" id="cardNumber"></input>
+				</fieldset>
+				<fieldset class="submitFieldset">
+					<legend>Submit</legend>
+					<input class="submitOption" type="reset" value="Clear"></input>
+					<input class="submitOption" type="submit" value="Submit"></input>
+				</fieldset>
+			</form>
+		</div>
+	</div>
+	<div class="footer">
+		<address>
+			Jacob's Jump Ropes&copy;<br/>
+			1234 Main St<br/>
+			Santa Monica, CA 90405
+		</address>
+		<div>
+			<a href="http://validator.w3.org/check?uri=referer"><img src="http://www.w3.org/Icons/valid-xhtml11" alt="Valid XHTML 1.1" height="31" width="88" /></a>
+			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" height="31" width="88" /></a>
+		</div>
+	</div>
+</body>
+</html>

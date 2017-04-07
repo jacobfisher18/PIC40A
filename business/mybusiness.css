@@ -1,0 +1,257 @@
+/*sets 3 default properties for all elements*/
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+body {
+  background-color: #899AFF;
+  font-family: avenir, arial, sans-serif;
+}
+
+.header {
+  background-color: #fff;
+  text-align: center;
+  color: #899AFF;
+  padding: 20px;
+  font-weight: bold;
+  height: 120px;
+}
+
+.header blockquote {
+  font-family: georgia, serif;
+  font-style: italic;
+  color: #606EBF;
+  font-size: 20px;
+}
+
+h3 {
+  font-family: helvetica, sans-serif;
+  margin-bottom: 20px;
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+#aboutus img {
+  height: 150px;
+  float: right;
+  margin: 10px;
+  border: 10px solid white;
+}
+
+#aboutus p {
+  margin-bottom: 20px;
+}
+
+ul li a {
+  color: white;
+}
+
+ul li {
+  list-style-type: square;
+}
+
+ul {
+  margin-bottom: 20px;
+}
+
+table {
+  margin-bottom: 20px;
+}
+
+table th {
+  font-size: 14px;
+  border: 1px solid white;
+  padding: 5px;
+}
+
+table td {
+  font-size: 12px;
+  border: 1px solid white;
+  padding: 5px;
+}
+
+ol {
+  margin-left: 20px;
+}
+
+.mainContainer {
+  width: 900px;
+  margin: 100px auto;
+  color: #fff;
+}
+
+.sideBar {
+  width: 350px;
+  float: left;
+  background-color: #606EBF;
+  padding: 30px;
+  box-sizing: border-box;
+  height: 850px;
+}
+
+.mainContent {
+  width: 550px;
+  float: right;
+  background-color: #7282E0;
+  padding: 30px;
+  box-sizing: border-box;
+  height: 850px;
+}
+
+.footer {
+  position: relative;
+  clear: both;
+  top: 100px;
+  background-color: #fff;
+  text-align: center;
+  padding: 20px;
+  color: #606EBF;
+}
+
+.footer address {
+  margin-bottom: 20px;
+}
+
+.pageLink {
+  color: white;
+  text-decoration: none;
+  border: 1px solid white;
+  padding: 20px;
+  position: relative;
+  top: 20px;
+}
+
+.pageLink:hover {
+  background-color: white;
+  color: #606EBF;
+}
+
+/* Nav Bar */
+
+#navbar {
+  font-family: verdana;
+  width: 600px;
+  margin: 20px auto;
+}
+
+#navbar li {
+  list-style: none;
+  float: left;
+  background-color: #899AFF;
+  width: 200px;
+}
+
+#navbar li a {
+  display: block;
+  text-decoration: none;
+  padding: 10px 20px;
+  color: white;
+  text-transform: uppercase;
+  font-size: 12px;
+}
+
+#navbar li ul {display: none;}
+
+#navbar li:hover ul {
+  display: block;
+  position: absolute;
+  margin: 0;
+  padding: 0;
+}
+
+#navbar li:hover li {
+  float: none;
+  background-color: #606EBF;
+}
+
+#navbar li:hover li:hover {
+  background-color: #7282E0;
+}
+
+#navbar li:hover li a {color: #fff;}
+
+/* Form */
+
+#mailingListLabel {margin-top: 20px;}
+
+#cardType {margin-top: 20px;}
+
+#productChosen {margin-bottom: 30px;}
+
+form {
+  background-color: #606EBF;
+  padding: 20px;
+}
+
+fieldset {
+  border: 2px solid white;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+legend {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  margin: 10px auto;
+}
+
+label {
+  margin-top: 10px;
+}
+
+input[type=text] {
+  height: 20px;
+  padding-left: 5px;
+}
+
+input[type=checkbox] {
+  margin-top: 20px;
+}
+
+input[type=password] {
+  height: 20px;
+  padding-left: 5px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input {
+  margin-top: 10px;
+}
+
+input[type=submit]{
+  background: none;
+  height: 50px;
+  width: 100px;
+  border: 1px solid white;
+  color: white;
+  margin-bottom: 20px;
+}
+
+input[type=reset] {
+  background: none;
+  height: 50px;
+  width: 100px;
+  border: 1px solid white;
+  color: white;
+  margin-bottom: 20px;
+}
+
+input[type=submit]:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #606EBF;
+}
+
+input[type=reset]:hover {
+  cursor: pointer;
+  background-color: white;
+  color: #606EBF;
+}

@@ -1,0 +1,211 @@
+/*general*/
+
+* {
+  margin: 0;
+  border:0;
+  padding:0;
+  font-family: 'Avenir';
+  color: #fff;
+}
+
+body {
+  background-color: #49E2C3;
+  padding: 50px;
+}
+
+input[type=text] {
+  color: #43A38F;
+}
+
+input[type=password] {
+  color: #43A38F;
+}
+
+input:focus {
+  outline: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+.styled_input {
+  padding-left: 10px;
+  height: 20px;
+  margin-bottom: 5px;
+}
+
+/* home.html*/
+
+#home_body {
+  text-align: center;
+  padding-top: 100px;
+}
+
+#home_body h3 {
+  max-width: 300px;
+  margin: 0 auto;
+  font-weight: normal;
+}
+
+.link_button {
+  height: 40px;
+  line-height: 40px;
+  width: 120px;
+  background-color: #43A38F;
+  margin: 20px auto;
+  font-size: 15px;
+}
+
+.link_button:hover {
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* signup.html*/
+
+#signup_body {
+  text-align: center;
+  padding-top: 100px;
+}
+
+#signup_body h1 {
+  margin-bottom: 20px;
+}
+
+/* login.html*/
+
+#login_body {
+  text-align: center;
+  padding-top: 100px;
+}
+
+#login_body h1 {
+  margin-bottom: 20px;
+}
+
+/* error.php*/
+
+#error_body {
+  text-align: center;
+  padding-top: 100px;
+}
+
+/*cal.php*/
+
+#header {
+  height: 80px;
+  text-align: center;
+  background-color: #43A38F;
+  position: relative;
+  margin-bottom: 50px;
+}
+
+#schedule-title {
+  line-height: 80px;
+}
+
+#logout {
+  position: absolute;
+  right: 30px;
+  line-height: 80px;
+  top: 0px;
+}
+
+#logout:hover {
+  cursor: pointer;
+  color: #49E2C3;
+}
+
+.event {
+  height: 45px;
+  margin-bottom: 10px;
+  background-color: #fff;
+}
+
+.event-time {
+  float: left;
+  width: 150px;
+  background-color: #43A38F;
+  color: #fff;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.event-title {
+  float: left;
+  color: #43A38F;
+  height: 45px;
+  line-height: 45px;
+  padding-left: 20px;
+}
+
+.event-delete {
+  float: right;
+  width: 50px;
+  background-color: #43A38F;
+  color: #fff;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 12px;
+}
+
+.event-delete:hover {
+  cursor: pointer;
+  color: #49E2C3;
+}
+
+#add-event-button {
+  height: 45px;
+  line-height: 45px;
+  background-color: #43A38F;
+  color: #fff;
+  text-align: center;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+#add-event-button:hover {
+  cursor: pointer;
+  background-color: #fff;
+  color: #43A38F;
+}
+
+#add-event-form {
+  margin-top: 30px;
+  display: none;
+  background-color: #43A38F;
+  height: 90px;
+  line-height: 90px;
+  padding-left: 20px;
+  font-weight: bold;
+}
+
+#add-event-form input[type=text] {
+  padding-left: 10px;
+  height: 30px;
+}
+
+#event_ampm {
+  width: 50px;
+  height: 30px;
+  background-color: #fff;
+  color: #43A38F;
+  border-radius: 0px;
+}
+
+#event_submit {
+  width: 80px;
+  height: 30px;
+  background-color: #fff;
+  color: #43A38F;
+}
+
+#event_submit:hover {
+  background-color: #49E2C3;
+  color: #fff;
+  cursor: pointer;
+}

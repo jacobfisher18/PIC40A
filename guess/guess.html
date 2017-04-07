@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+
+<html lang="en">
+  <head>
+    <title>JS Lab</title>
+    <meta charset = "utf-8" />
+    <script type="text/javascript">
+      function myfunc(){
+        var keepPlaying = true;
+
+        while (keepPlaying) {
+
+          var num = Math.floor( 1 + Math.random() * 100 );
+          var numberGuessed = false;
+
+          while (!numberGuessed) {
+
+            var guess = prompt("Guess the number", "");
+
+            if (guess < num) {
+              alert("Sorry, you're wrong. Your guess of " + guess + " is too low.");
+            }
+
+            else if (guess > num) {
+              alert("Sorry, you're wrong. Your guess of " + guess + " is too high.");
+            }
+
+            else if (guess == num) {
+              alert("Right! " + guess + " is the magic number.");
+              numberGuessed = true;
+            }
+
+            else {
+              alert("Invalid Input");
+            }
+
+          }
+
+          var keepPlayingInput = prompt("Would you like to play again (yes/no)?", "");
+
+          while (!(keepPlayingInput == "yes" || keepPlayingInput == "no")) {
+            keepPlayingInput = prompt("Invalid input. Would you like to play again (yes/no)?", "");
+          }
+
+          if (keepPlayingInput == "no") {
+            keepPlaying = false;
+          }
+
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    <script type="text/javascript">
+      myfunc();
+    </script>
+  </body>
+</html>

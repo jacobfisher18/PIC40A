@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+"http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+  <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=utf-8"/>
+  <title>JavaScript HW3</title>
+  <style type="text/css">
+
+  * {
+    font-family: avenir, helvetica, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    border: 0;
+  }
+
+  body {
+    background-color: #C0C2CE;
+  }
+
+  #mainContainer {
+    width: 320px;
+    margin: 50px auto;
+    text-align: center;
+  }
+
+  h1 {
+    background-color: #222;
+    color: #FE667B;
+    width: 320px;
+    height: 80px;
+    line-height: 80px;
+    border-bottom: 5px solid #FE667B;
+    font-size: 30px;
+  }
+
+  input {
+    width: 320px;
+    height: 40px;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #222;
+    color: #FE667B;
+    border-bottom: 5px solid #FE667B;
+  }
+
+  #buttons {
+    width: 320px;
+    margin-bottom: 30px;
+  }
+
+  button {
+    width: 80px;
+    height: 80px;
+    background-color: #222;
+    color: #FE667B;
+  }
+
+  button:hover {
+    background-color: #AAACB9;
+  }
+
+  button:active {
+    background-color: #222;
+  }
+
+  button:hover {
+    cursor: pointer;
+  }
+
+  *:focus {
+    outline: 0;
+  }
+
+  </style>
+  <script type="text/javascript">
+  <!--
+
+  var currentNumString = ""; //the current number being typed, as a string
+  var previousNumString = ""; //the number previously typed, as a string
+  var operator = ""; //the operator that has been selected
+
+  function display(num) {
+    var node = document.getElementById("display");
+    node.value=num;
+  }
+
+  function numberPress(num) {
+    currentNumString += num.toString();
+    display(currentNumString);
+  }
+
+  function decimalPress() {
+    currentNumString += ".";
+    display(currentNumString);
+  }
+
+  function operatorPress(op) {
+    previousNumString = currentNumString;
+    currentNumString = "";
+    operator = op;
+  }
+
+  function preformOperation() {
+    var firstNum = Number(previousNumString);
+    var secondNum = Number(currentNumString);
+    var result;
+
+    if (operator === "+") { result = firstNum + secondNum}
+    if (operator === "-") { result = firstNum - secondNum}
+    if (operator === "/") { result = firstNum / secondNum}
+    if (operator === "*") { result = firstNum * secondNum}
+
+    var stringResult = result.toString();
+    previousNumString = "";
+    currentNumString = stringResult;
+    display(stringResult);
+  }
+
+  //-->
+
+  </script>
+</head>
+<body>
+
+  <div id="mainContainer">
+    <h1>Calculator</h1>
+
+    <form action="" method="get">
+      <p>
+        <input type="text" id="display"/>
+      </p>
+    </form>
+
+    <div id="buttons">
+
+      <button type='button' onclick="numberPress(7)">7</button><button type='button' onclick="numberPress(8)">8</button><button type='button' onclick="numberPress(9)">9</button><button type='button' onclick="operatorPress('/')">/</button> <br/>
+      <button type='button' onclick="numberPress(4)">4</button><button type='button' onclick="numberPress(5)">5</button><button type='button' onclick="numberPress(6)">6</button><button type='button' onclick="operatorPress('*')">*</button> <br/>
+      <button type='button' onclick="numberPress(1)">1</button><button type='button' onclick="numberPress(2)">2</button><button type='button' onclick="numberPress(3)">3</button><button type='button' onclick="operatorPress('-')">-</button> <br/>
+      <button type='button' onclick="decimalPress()">.</button><button type='button' onclick="numberPress(0)">0</button><button type='button' onclick="preformOperation()">=</button><button type='button' onclick="operatorPress('+')">+</button>
+
+    </div>
+
+    <p>
+      <a id="w3Icon" href="http://validator.w3.org/check?uri=referer"><img
+        src="http://www.w3.org/Icons/valid-xhtml11"
+        alt="Valid XHTML 1.1" height="31" width="88" />
+      </a>
+    </p>
+    </div>
+  </body>
+  </html>

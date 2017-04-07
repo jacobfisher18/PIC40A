@@ -1,0 +1,111 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<!-- saved from url=(0068)http://www.math.ucla.edu/~virtanen/40a.1.17w/labs/ajax_lab/vote.html -->
+<html xmlns="http://www.w3.org/1999/xhtml"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>Ajax</title>
+	<style type="text/css">
+
+	#yes {
+		width:100px;
+		height: 20px;
+		border: solid black 1px;
+		background-color:blue;
+		margin: 20px;
+	}
+
+	#no {
+		width:100px;
+		height: 20px;
+		border: solid black 1px;
+		background-color:red;
+		margin: 20px;
+	}
+
+	#container {
+		margin-top: 50px;
+		width:400px;
+		height: 300px;
+		margin: 20px;
+	}
+
+	</style>
+
+	<script type="text/javascript">
+
+	function process_form() {
+		var yes_check = document.getElementById("yes_check");
+		var no_check = document.getElementById("no_check");
+
+		var query_string;
+
+		if (yes_check.checked) {
+			query_string = "vote=yes";
+		}
+
+		else if (no_check.checked) {
+			query_string = "vote=no";
+		}
+
+		do_ajax_stuff(query_string);
+	}
+
+	function do_ajax_stuff(query_string) {
+		var xhr = new XMLHttpRequest();
+
+		xhr.onreadystatechange = function () {
+			if (xhr.readyState == 4 && xhr.status == 200) {
+				var result = xhr.responseText;
+				display_result(result);
+			}
+		}
+
+		xhr.open("GET", "http://pic.ucla.edu/~jacobfisher18/vote.php?" + query_string,true);
+		xhr.send(null);
+	}
+
+	function display_result(result) {
+
+		var yes_div = document.getElementById("yes");
+		var no_div = document.getElementById("no");
+
+		var result_arr = result.split(",");
+		var yes_votes = parseInt(result_arr[0]);
+		var no_votes = parseInt(result_arr[1]);
+
+		var total_votes = yes_votes + no_votes;
+
+		var yes_width = 100; //default
+		var no_width = 100; //default
+
+		//to avoid division by 0 if there are no votes yet
+		if (total_votes != 0) {
+			yes_width = (yes_votes / (total_votes)) * 200;
+			no_width = (no_votes / (total_votes)) * 200;
+		}
+
+		yes_div.style.width = yes_width + "px";
+		no_div.style.width = no_width + "px";
+		yes_div.innerHTML = "Yes: " + yes_votes;
+		no_div.innerHTML = "No: " + no_votes;
+	}
+	</script>
+
+</head>
+
+<body>
+	<h2>Vote on the question: Is Futurama the best show of all time?</h2>
+	<fieldset>
+		<form action="http://www.math.ucla.edu/~virtanen/40a.1.17w/labs/ajax_lab/vote.html#" method="get">
+			<p>
+				Yes <input type="radio" name="vote" value="yes" id="yes_check"><br>
+				No  <input type="radio" name="vote" value="no" id="no_check"><br>
+				<input type="button" value="Submit" onclick="process_form()">
+			</p>
+		</form>
+	</fieldset>
+	<h1>Results</h1>
+	<div id="container">
+		<div id="yes" class="yes">Yes:</div>
+		<div id="no">No:</div>
+	</div>
+</body>
+</html>
